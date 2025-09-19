@@ -20,57 +20,84 @@ struct HomeView: View {
                 Image(systemName: "bell")
                     .frame(width: 40, height: 40)
                     .background(.background, in: Circle())
+                    .shadow(radius: 4)
             }
             .padding(EdgeInsets(top: 16, leading: 16, bottom: 8, trailing: 16))
             
             HStack {
                 Image(systemName: "magnifyingglass")
                     .frame(width: 40, height: 40)
-                TextField("Search", text: .constant("") )
+                TextField("Search", text: .constant("") ).padding(.vertical)
                 
             }
             .overlay{
                 RoundedRectangle(cornerRadius: 16).stroke(.green, lineWidth: 2)
             }
-            .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+            .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+            .shadow(radius: 4)
+
             
-            
-            HStack{
-                Image("banner")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 92, height: 256)
-                
-                Spacer()
+            ScrollView {
                 VStack {
-                    
-                    Button(action: {}) {
-                        Text("Shop now")
-                            .padding()
-                            .foregroundStyle(.black)
-                            .background(.yellow,in: RoundedRectangle(cornerRadius: 16))
+                    HStack{
+                        
+                        VStack {
+                            
+                            Text("Special offers for you")
+                                .font(.title)
+                                .foregroundStyle(.white)
+                                .bold()
+                                .padding(.horizontal)
+                            Button(action: {}) {
+                                Text("Shop now")
+                                    .padding()
+                                    .foregroundStyle(.black)
+                                    .background(.yellow,in: RoundedRectangle(cornerRadius: 16))
+                            }
+                        }
+                        Spacer()
+                        Image("dog")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(height: 224)
+                        
+                        
                     }
-                }
-                Spacer()
-                Image("banner")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 92, height: 256)
-            
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 224)
+                    .background(.green)
+                    .clipShape( RoundedRectangle(cornerRadius: 32))
+                    .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+                    
+                    HStack {
+                        Text("Products").font(.headline)
+                        Spacer()
+                        Button(action: {}) {
+                            Text("See all")
+                                .font(.headline)
+                                .tint(.primary)
+                        }
+                    }
+                    .padding()
+                    
                 
+                    LazyVGrid(
+                        columns: [
+                            GridItem(.flexible(), spacing: 16),
+                            GridItem(.flexible(), spacing: 16)
+                        ],
+                        spacing: 16
+                    ) {
+                        ForEach(products, id: \.self.price) { product in    
+                            ProductCard(product: product)
+                        }
+                    }
+                    .padding(.horizontal, 16)
+                }
             }
-            .frame(maxWidth: .infinity)
-            .frame(height: 192)
-            .background(.green)
-            .clipShape( RoundedRectangle(cornerRadius: 32))
-            .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
-            
-            Spacer()
-            
-            
-            
         }
         .background(.gray.opacity(0.1))
+        .tint(.green)
     }
 }
 

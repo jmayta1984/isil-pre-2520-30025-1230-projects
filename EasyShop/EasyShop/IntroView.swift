@@ -10,7 +10,12 @@ import SwiftUI
 struct IntroView: View {
     var body: some View {
         VStack {
-            Spacer()
+            Image("background")
+                .resizable()
+                .scaledToFit()
+                .frame(maxHeight: .infinity)
+                .clipped()
+            
             Button(action: {
                 
             }) {
@@ -33,10 +38,12 @@ struct IntroView: View {
                         RoundedRectangle(cornerRadius: 24)
                             .stroke(.primary, lineWidth: 2)
                     }
-                    
+                
             }
             .padding(EdgeInsets(top: 8, leading: 16, bottom: 0, trailing: 16))
         }
+        .background(.gray.opacity(0.1))
+        .tint(.green)
         .padding(.bottom, 32)
     }
 }
