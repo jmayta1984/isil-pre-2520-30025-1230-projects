@@ -11,7 +11,7 @@ struct MainView: View {
     var body: some View {
         TabView{
             Tab("Home", systemImage: "house") {
-                
+                HomeView()
             }
             Tab("Favorites", systemImage: "heart") {
                 
@@ -25,6 +25,7 @@ struct MainView: View {
             
         }
         .tint(.green)
+        .navigationBarBackButtonHidden()
     }
 }
 

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State var selectedProduct: Product? = nil
+    
     var body: some View {
         VStack{
             
@@ -90,6 +93,9 @@ struct HomeView: View {
                     ) {
                         ForEach(products, id: \.self.price) { product in    
                             ProductCard(product: product)
+                                .onTapGesture {
+                                    selectedProduct = product
+                                }
                         }
                     }
                     .padding(.horizontal, 16)
@@ -98,6 +104,9 @@ struct HomeView: View {
         }
         .background(.gray.opacity(0.1))
         .tint(.green)
+        .navigationDestination(item: $selectedProduct) { product in
+            ProductDetail(product: product)
+        }
     }
 }
 

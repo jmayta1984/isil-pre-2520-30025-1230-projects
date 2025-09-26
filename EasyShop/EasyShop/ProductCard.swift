@@ -33,6 +33,7 @@ struct ProductCard: View {
         
             Text(product.name)
                 .font(.headline)
+                .lineLimit(1)
             Text("$ \(product.price, specifier: "%.2f")")
 
         }
