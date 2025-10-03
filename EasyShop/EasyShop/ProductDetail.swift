@@ -76,7 +76,7 @@ struct ProductDetail: View {
                     .padding()
                     .frame(maxWidth: .infinity)
                     .foregroundStyle(.background)
-                    .background(.primary, in: RoundedRectangle(cornerRadius: 24))
+                    .background(.primary, in: RoundedRectangle(cornerRadius: 16))
             }
             .padding(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
         }

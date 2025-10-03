@@ -73,7 +73,7 @@ struct LoginView: View {
                         .font(.headline)
                         .frame(maxWidth: .infinity)
                         .background(.green)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.background)
                         .clipShape(RoundedRectangle(cornerRadius: 16))
                 }
                 
