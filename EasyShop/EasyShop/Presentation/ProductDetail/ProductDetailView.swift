@@ -11,6 +11,9 @@ struct ProductDetailView: View {
     let product: Product
         
     @StateObject var viewModel = ProductDetailViewModel()
+    @EnvironmentObject var cartViewModel: CartViewModel
+    @EnvironmentObject var mainViewModel: MainViewModel
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         
@@ -70,7 +73,9 @@ struct ProductDetailView: View {
             }
             
             Button(action: {
-                
+                cartViewModel.addCartItem(product: product, quantity: viewModel.quantity)
+                mainViewModel.selectedTab = 2
+                dismiss()
             }) {
                 Text("Add to cart")
                     .padding()
@@ -86,8 +91,3 @@ struct ProductDetailView: View {
     }
 }
 
-
-
-#Preview {
-    ProductDetailView(product: products[0])
-}

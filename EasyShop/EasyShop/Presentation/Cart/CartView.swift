@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CartView: View {
-    @StateObject var cartViewModel = CartViewModel()
+    @EnvironmentObject var cartViewModel: CartViewModel
+    
     var body: some View {
         VStack {
             List {
@@ -67,6 +68,7 @@ struct CartView: View {
 
 #Preview {
     CartView()
+        .environmentObject(CartViewModel())
 }
 
 struct CartItemCard: View {

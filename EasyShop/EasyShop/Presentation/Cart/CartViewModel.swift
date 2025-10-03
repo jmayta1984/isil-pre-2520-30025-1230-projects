@@ -9,9 +9,10 @@ import Foundation
 
 class CartViewModel: ObservableObject {
     
-    @Published private(set) var cartItems: [CartItem] = items
+    @Published private(set) var cartItems: [CartItem] = []
     
     func addCartItem(product: Product, quantity: Int) {
+        print("Add")
         cartItems.append(CartItem(product: product, quantity: quantity))
     }
     

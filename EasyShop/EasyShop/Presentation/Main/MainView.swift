@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct MainView: View {
+    @EnvironmentObject var viewModel: MainViewModel
+    
     var body: some View {
-        TabView{
-            Tab("Home", systemImage: "house") {
+        TabView(selection: $viewModel.selectedTab){
+            Tab("Home", systemImage: "house", value: 0) {
                 HomeView()
             }
-            Tab("Favorites", systemImage: "heart") {
+            Tab("Favorites", systemImage: "heart", value: 1) {
                 
             }
-            Tab("Cart", systemImage: "cart") {
-                
+            Tab("Cart", systemImage: "cart", value: 2) {
+                CartView()
             }
-            Tab("Profile", systemImage: "person") {
+            Tab("Profile", systemImage: "person", value: 3) {
                 
             }
             
@@ -31,4 +33,10 @@ struct MainView: View {
 
 #Preview {
     MainView()
+        .environmentObject(CartViewModel())
+        .environmentObject(MainViewModel())
+}
+
+class MainViewModel: ObservableObject {
+    @Published var selectedTab = 0
 }

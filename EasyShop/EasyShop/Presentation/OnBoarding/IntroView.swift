@@ -57,4 +57,6 @@ struct IntroView: View {
 
 #Preview {
     IntroView()
+        .environmentObject(CartViewModel())
+        .environmentObject(MainViewModel())
 }

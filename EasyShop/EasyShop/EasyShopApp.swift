@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct EasyShopApp: App {
+    @StateObject var cartViewModel = CartViewModel()
+    @StateObject var mainViewModel = MainViewModel()
+
     var body: some Scene {
         WindowGroup {
             IntroView()
+                .environmentObject(cartViewModel)
+                .environmentObject(mainViewModel)
         }
     }
 }
