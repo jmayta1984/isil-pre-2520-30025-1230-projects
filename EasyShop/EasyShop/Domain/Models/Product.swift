@@ -15,7 +15,7 @@ let products = [
     
     Product(name: "Chicken", price: 28.99, image: "https://www.pedigree.com/sites/g/files/fnmzdf3076/files/migrate-product-files/images/vcwwacmkjnrwrgegjkly.png"),
     Product(name: "Chicken & Green Pea Recipe", price: 38.99, image: "https://www.pedigree.com/sites/g/files/fnmzdf3076/files/migrate-product-files/images/vcwwacmkjnrwrgegjkly.png"),
-    Product(name: "Chicken & Green Pea Recipe", price: 78.99, image: "https://www.pedigree.com/sites/g/files/fnmzdf3076/files/migrate-product-files/images/vcwwacmkjnrwrgegjkly.png"),
-    Product(name: "Chicken & Green Pea Recipe", price: 188.99, image: "https://www.pedigree.com/sites/g/files/fnmzdf3076/files/migrate-product-files/images/vcwwacmkjnrwrgegjkly.png"),
+    Product(name: "Chicken & Green", price: 78.99, image: "https://www.pedigree.com/sites/g/files/fnmzdf3076/files/migrate-product-files/images/vcwwacmkjnrwrgegjkly.png"),
+    Product(name: "Chicken & Green Pea", price: 188.99, image: "https://www.pedigree.com/sites/g/files/fnmzdf3076/files/migrate-product-files/images/vcwwacmkjnrwrgegjkly.png"),
     Product(name: "Chicken & Green Pea Recipe", price: 288.99, image: "https://www.pedigree.com/sites/g/files/fnmzdf3076/files/migrate-product-files/images/vcwwacmkjnrwrgegjkly.png")
 ]

@@ -1,5 +1,5 @@
 //
-//  ProductDetail.swift
+//  ProductDetailView.swift
 //  EasyShop
 //
 //  Created by Jorge Mayta on 18/09/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProductDetail: View {
+struct ProductDetailView: View {
     let product: Product
         
     @StateObject var viewModel = ProductDetailViewModel()
@@ -89,5 +89,5 @@ struct ProductDetail: View {
 
 
 #Preview {
-    ProductDetail(product: products[0])
+    ProductDetailView(product: products[0])
 }

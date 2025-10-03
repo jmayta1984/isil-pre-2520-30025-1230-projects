@@ -105,7 +105,7 @@ struct HomeView: View {
         .background(.gray.opacity(0.1))
         .tint(.green)
         .navigationDestination(item: $selectedProduct) { product in
-            ProductDetail(product: product)
+            ProductDetailView(product: product)
         }
     }
 }
