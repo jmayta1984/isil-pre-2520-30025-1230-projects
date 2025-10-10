@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct CategoryListView: View {
+    @State var viewModel = CategoryListViewModel()
     
     var body: some View {
-        Text("Hello, World!")
+        List {
+            ForEach(viewModel.categories) { category in
+                Text(category.name)
+            }
+        }
     }
 }
 
