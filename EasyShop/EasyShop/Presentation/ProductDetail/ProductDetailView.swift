@@ -13,6 +13,8 @@ struct ProductDetailView: View {
     @StateObject var viewModel = ProductDetailViewModel()
     @EnvironmentObject var cartViewModel: CartViewModel
     @EnvironmentObject var mainViewModel: MainViewModel
+    @EnvironmentObject var favoritesViewModel: FavoritesViewModel
+
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -21,11 +23,26 @@ struct ProductDetailView: View {
             ScrollView {
                 VStack(alignment: .leading) {
                     
+                    HStack {
+                        Spacer()
+                        Button {
+                            withAnimation {
+                                favoritesViewModel.toggleFavorite(product: product)
+                            }
+                        } label: {
+                            Image(systemName: favoritesViewModel.favorites.contains(product) ? "heart.fill" : "heart")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 24, height: 24)
+                                .padding(.horizontal)
+                        }
+
+                    }
                     AsyncImage(
                         url: URL(string: product.image),
                         content: { image in
                             image.resizable()
-                                .scaledToFill()
+                                .scaledToFit()
                                 .frame(maxWidth: .infinity)
                                 .frame(height: 400)
                                 .clipped()

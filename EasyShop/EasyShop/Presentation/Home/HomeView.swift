@@ -61,13 +61,12 @@ struct HomeView: View {
                         Spacer()
                         Image("dog")
                             .resizable()
-                            .scaledToFill()
-                            .frame(height: 224)
+                            .scaledToFit()
                         
                         
                     }
                     .frame(maxWidth: .infinity)
-                    .frame(height: 224)
+                    .frame(height: 200)
                     .background(.green)
                     .clipShape( RoundedRectangle(cornerRadius: 32))
                     .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
@@ -91,7 +90,7 @@ struct HomeView: View {
                         ],
                         spacing: 16
                     ) {
-                        ForEach(products, id: \.self.price) { product in    
+                        ForEach(products) { product in    
                             ProductCard(product: product)
                                 .onTapGesture {
                                     selectedProduct = product
@@ -107,7 +106,9 @@ struct HomeView: View {
         .navigationDestination(item: $selectedProduct) { product in
             ProductDetailView(product: product)
         }
+        
     }
+    
 }
 
 #Preview {

@@ -12,13 +12,21 @@ class CartViewModel: ObservableObject {
     @Published private(set) var cartItems: [CartItem] = []
     
     func addCartItem(product: Product, quantity: Int) {
-        print("Add")
-        cartItems.append(CartItem(product: product, quantity: quantity))
+        
+        if let index = cartItems.firstIndex(where: { item in
+            item.product.id == product.id
+        }){
+            cartItems[index].quantity += quantity
+        }
+        else {
+            cartItems.append(CartItem(product: product, quantity: quantity))
+
+        }
     }
     
     func removeCartItem(cartItem: CartItem) {
         guard let index = cartItems.firstIndex(where: { item in
-            item.product.name == cartItem.product.name
+            item.product.id == cartItem.product.id
         }) else { return }
         
         cartItems.remove(at: index)
@@ -28,7 +36,7 @@ class CartViewModel: ObservableObject {
     func updateCartItemQuantity(product: Product, increase: Bool) {
         
         guard let index = cartItems.firstIndex(where: { item in
-            item.product.name == product.name
+            item.product.id == product.id
         }) else { return }
         
         if (increase){

@@ -25,11 +25,10 @@ struct CartView: View {
                         } label: {
                             Label("Remove", systemImage: "trash")
                         }
-
+                        
                     }
                 }
-        
-                .listRowSeparator(.hidden)
+                
                 
             }
             .listStyle(.plain)
@@ -41,28 +40,23 @@ struct CartView: View {
                     Spacer()
                     
                     Text("$ \(cartViewModel.cartItems.reduce(0, { $0 + Double($1.quantity)*$1.product.price }), specifier: "%.2f")")
-                        .font(.headline)
+                        .font(.subheadline)
                     
                 }
                 Button(action: {}) {
-                    
-                    NavigationLink(destination: {
-                        MainView()
-                    }) {
-                        Text("Check out")
-                            .padding()
-                            .font(.headline)
-                            .frame(maxWidth: .infinity)
-                            .background(.green)
-                            .foregroundStyle(.background)
-                            .clipShape(RoundedRectangle(cornerRadius: 16))
-                    }
-                    
+                    Text("Check out")
+                        .padding()
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .background(.green)
+                        .foregroundStyle(.background)
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
                 }
             }
             .padding()
+            .background(.ultraThinMaterial)
         }
-       
+        
     }
 }
 
@@ -93,9 +87,11 @@ struct CartItemCard: View {
             VStack (alignment:.leading){
                 Text(cartItem.product.name)
                     .font(.headline)
+                    .lineLimit(1)
+
                 Text("$ \(cartItem.product.price, specifier: "%.2f")")
                 
-            }
+            }.padding(.leading)
             Spacer()
             
             HStack {
@@ -112,7 +108,6 @@ struct CartItemCard: View {
                 .buttonStyle(.plain)
             }
         }
-        
         
     }
 }

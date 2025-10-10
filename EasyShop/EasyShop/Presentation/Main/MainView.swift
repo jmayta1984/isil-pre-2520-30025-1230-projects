@@ -16,7 +16,7 @@ struct MainView: View {
                 HomeView()
             }
             Tab("Favorites", systemImage: "heart", value: 1) {
-                
+                FavoritesView()
             }
             Tab("Cart", systemImage: "cart", value: 2) {
                 CartView()
