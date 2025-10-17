@@ -4,7 +4,7 @@
 //
 //  Created by Jorge Mayta on 9/10/25.
 //
-nonisolated struct CategoriesWrapperDto: Decodable {
+ nonisolated struct CategoriesWrapperDto: Decodable {
     let categories: [CategoryDto]
 
     enum CodingKeys: String, CodingKey {

@@ -4,13 +4,13 @@
 //
 //  Created by Jorge Mayta on 10/10/25.
 //
-import Observation
-import CoreFoundation
+import Combine
+import Foundation
 
-@Observable
-class CategoryListViewModel {
+@MainActor
+class CategoryListViewModel: ObservableObject {
     
-    var categories: [Category] = []
+    @Published var categories: [Category] = []
     
     func getCategories() {
         let service = CategoryService.shared
