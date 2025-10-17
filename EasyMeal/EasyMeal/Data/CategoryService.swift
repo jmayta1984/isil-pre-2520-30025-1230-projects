@@ -14,9 +14,9 @@ class CategoryService {
     private init() {}
     
     func getCategories(completion: @escaping ([Category]?, String?) -> Void) {
-        let urlString = "https://www.themealdb.com/api/json/v1/1/categories.php"
+        let endpoint = "https://www.themealdb.com/api/json/v1/1/categories.php"
         
-        guard let url = URL(string: urlString) else {
+        guard let url = URL(string: endpoint) else {
             completion(nil,"Error: cannot create URL")
             return
         }
@@ -49,7 +49,9 @@ class CategoryService {
                     Category(
                         id: categoryDto.id,
                         name: categoryDto.name,
-                        posterPath: categoryDto.posterPath)
+                        posterPath: categoryDto.posterPath,
+                        overview: categoryDto.overview
+                    )
                 }
                 completion(categories, nil)
                 
