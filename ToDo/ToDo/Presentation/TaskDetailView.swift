@@ -8,56 +8,43 @@
 import SwiftUI
 
 struct TaskDetailView: View {
-    @State var title = ""
-    @State private var headerHeight: CGFloat = 80
-
-    var save: (String) -> Void
+    @State private var title = ""
+    var task: Task?
+    var cancel: () -> Void
+    var save: (Task) -> Void
     var body: some View {
-        ZStack (alignment:.top){
+        NavigationStack {
             List {
                 Section {
                     TextField("Title", text: $title)
                         .autocorrectionDisabled()
                 }
             }
-            .safeAreaInset(edge: .top, spacing: 0) {
-                         Color.clear.frame(height: headerHeight)
-                     }
-        
-                    
-            HStack {
-                Button {
-                    save(title)
-                } label: {
-                    Image(systemName: "xmark")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 24, height: 24)
-                        .tint(Color(uiColor: .label))
-                        .padding()
-                        .background()
-                        .clipShape(Circle())
-                        .shadow(radius: 4)
-                        .padding(.leading, 16)
+            .navigationTitle( task == nil ? "New task" : "Edit task")
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        cancel()
+                    } label: {
+                        Image(systemName: "xmark")
+                    }
                 }
-                Spacer()
-                Button {
-                    save(title)
-                } label: {
-                    Image(systemName: "checkmark")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 24, height: 24)
-                        .tint(Color(uiColor: .label))
-                        .padding()
-                        .background()
-                        .clipShape(Circle())
-                        .shadow(radius: 4)
-                        .padding(.trailing, 16)
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        let task = Task(id: self.task?.id ?? UUID(), title: title)
+                        save(task)
+                    } label: {
+                        Image(systemName: "checkmark")
+                     
+                    }
                 }
             }
-            .padding(.top)
-            
+            .onAppear {
+                if let task {
+                    title = task.title
+                }
+            }
         }
         
     }
@@ -65,5 +52,6 @@ struct TaskDetailView: View {
 
 
 #Preview {
-    TaskDetailView {_ in}
+    TaskDetailView { } save: { _ in }
+
 }

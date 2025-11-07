@@ -21,18 +21,22 @@ class TaskListViewModel: ObservableObject {
         tasks = taskDao.fetchAll()
     }
     
-    func addTask(title: String) {
-        let task = Task(id: UUID(), title: title)
+    func addTask(task: Task) {
         taskDao.insert(task: task)
-        fetchTasks()
+        tasks.append(task)
     }
     
-    func updateTask() {
-        
+    func updateTask(task: Task) {
+        if let index = tasks.firstIndex(where: { $0.id == task.id }) {
+            tasks[index] = task
+            taskDao.update(task: task)
+        }
     }
     
     func deleteTask(task: Task) {
-        taskDao.delete(task: task)
-        fetchTasks()
+        if let index = tasks.firstIndex(where: { $0.id == task.id }) {
+            tasks.remove(at: index)
+            taskDao.delete(task: task)
+        }
     }
 }
