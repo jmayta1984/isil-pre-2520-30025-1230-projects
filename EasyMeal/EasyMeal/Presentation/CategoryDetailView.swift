@@ -32,6 +32,9 @@ struct CategoryDetailView: View {
                     ForEach(viewModel.meals) { meal in
                         MealCard(meal: meal)
                             .padding(8)
+                            .onTapGesture {
+                                MealDao.shared.insert(meal: meal)
+                            }
                     }
                 }
                 
