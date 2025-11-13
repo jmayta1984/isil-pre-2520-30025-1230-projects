@@ -19,22 +19,26 @@ struct TaskListView: View {
             ZStack (alignment: .bottomTrailing) {
                 List {
                     ForEach(viewModel.tasks) { task in
-                        Text(task.title)
-                            .onTapGesture {
-                                selectedTask = task
+                        HStack {
+                            Text(task.title)
+                            Spacer()
+                            
+                        }
+                        .background()
+                        .onTapGesture {
+                            selectedTask = task
+                        }
+                        .swipeActions(edge: .trailing) {
+                            Button(role: .destructive) {
+                                viewModel.deleteTask(task: task)
+                            } label: {
+                                Label("Delete", systemImage: "trash.fill")
                             }
-                            .swipeActions(edge: .trailing) {
-                                Button(role: .destructive) {
-                                    viewModel.deleteTask(task: task)
-                                } label: {
-                                    Label("Delete", systemImage: "trash.fill")
-                                }
-                            }
+                        }
                     }
                 }
                 Button {
                     showDetail.toggle()
-                    //viewModel.addTask(task: "New task")
                 } label: {
                     Image(systemName: "plus")
                         .resizable()
