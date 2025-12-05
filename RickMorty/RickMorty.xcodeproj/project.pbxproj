@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		B59D3DE72ED925B40058163A /* EasyNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B580CB772EE25CE80031971A /* RickMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		B59D3DE92ED925B40058163A /* EasyNotification */ = {
+		B580CB792EE25CE80031971A /* RickMorty */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = EasyNotification;
+			path = RickMorty;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B59D3DE42ED925B40058163A /* Frameworks */ = {
+		B580CB742EE25CE80031971A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B59D3DDE2ED925B40058163A = {
+		B580CB6E2EE25CE80031971A = {
 			isa = PBXGroup;
 			children = (
-				B59D3DE92ED925B40058163A /* EasyNotification */,
-				B59D3DE82ED925B40058163A /* Products */,
+				B580CB792EE25CE80031971A /* RickMorty */,
+				B580CB782EE25CE80031971A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B59D3DE82ED925B40058163A /* Products */ = {
+		B580CB782EE25CE80031971A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B59D3DE72ED925B40058163A /* EasyNotification.app */,
+				B580CB772EE25CE80031971A /* RickMorty.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B59D3DE62ED925B40058163A /* EasyNotification */ = {
+		B580CB762EE25CE80031971A /* RickMorty */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B59D3DF22ED925B50058163A /* Build configuration list for PBXNativeTarget "EasyNotification" */;
+			buildConfigurationList = B580CB822EE25CE90031971A /* Build configuration list for PBXNativeTarget "RickMorty" */;
 			buildPhases = (
-				B59D3DE32ED925B40058163A /* Sources */,
-				B59D3DE42ED925B40058163A /* Frameworks */,
-				B59D3DE52ED925B40058163A /* Resources */,
+				B580CB732EE25CE80031971A /* Sources */,
+				B580CB742EE25CE80031971A /* Frameworks */,
+				B580CB752EE25CE80031971A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				B59D3DE92ED925B40058163A /* EasyNotification */,
+				B580CB792EE25CE80031971A /* RickMorty */,
 			);
-			name = EasyNotification;
+			name = RickMorty;
 			packageProductDependencies = (
 			);
-			productName = EasyNotification;
-			productReference = B59D3DE72ED925B40058163A /* EasyNotification.app */;
+			productName = RickMorty;
+			productReference = B580CB772EE25CE80031971A /* RickMorty.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B59D3DDF2ED925B40058163A /* Project object */ = {
+		B580CB6F2EE25CE80031971A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
-					B59D3DE62ED925B40058163A = {
+					B580CB762EE25CE80031971A = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
 				};
 			};
-			buildConfigurationList = B59D3DE22ED925B40058163A /* Build configuration list for PBXProject "EasyNotification" */;
+			buildConfigurationList = B580CB722EE25CE80031971A /* Build configuration list for PBXProject "RickMorty" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = B59D3DDE2ED925B40058163A;
+			mainGroup = B580CB6E2EE25CE80031971A;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = B59D3DE82ED925B40058163A /* Products */;
+			productRefGroup = B580CB782EE25CE80031971A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B59D3DE62ED925B40058163A /* EasyNotification */,
+				B580CB762EE25CE80031971A /* RickMorty */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B59D3DE52ED925B40058163A /* Resources */ = {
+		B580CB752EE25CE80031971A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B59D3DE32ED925B40058163A /* Sources */ = {
+		B580CB732EE25CE80031971A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		B59D3DF02ED925B50058163A /* Debug */ = {
+		B580CB802EE25CE90031971A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -188,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		B59D3DF12ED925B50058163A /* Release */ = {
+		B580CB812EE25CE90031971A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,14 +244,13 @@
 			};
 			name = Release;
 		};
-		B59D3DF32ED925B50058163A /* Debug */ = {
+		B580CB832EE25CE90031971A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LZ2EAY26MB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -264,7 +263,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = pe.isil.EasyNotification;
+				PRODUCT_BUNDLE_IDENTIFIER = pe.isil.RickMorty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -276,14 +275,13 @@
 			};
 			name = Debug;
 		};
-		B59D3DF42ED925B50058163A /* Release */ = {
+		B580CB842EE25CE90031971A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LZ2EAY26MB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -296,7 +294,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = pe.isil.EasyNotification;
+				PRODUCT_BUNDLE_IDENTIFIER = pe.isil.RickMorty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -311,25 +309,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B59D3DE22ED925B40058163A /* Build configuration list for PBXProject "EasyNotification" */ = {
+		B580CB722EE25CE80031971A /* Build configuration list for PBXProject "RickMorty" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B59D3DF02ED925B50058163A /* Debug */,
-				B59D3DF12ED925B50058163A /* Release */,
+				B580CB802EE25CE90031971A /* Debug */,
+				B580CB812EE25CE90031971A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B59D3DF22ED925B50058163A /* Build configuration list for PBXNativeTarget "EasyNotification" */ = {
+		B580CB822EE25CE90031971A /* Build configuration list for PBXNativeTarget "RickMorty" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B59D3DF32ED925B50058163A /* Debug */,
-				B59D3DF42ED925B50058163A /* Release */,
+				B580CB832EE25CE90031971A /* Debug */,
+				B580CB842EE25CE90031971A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B59D3DDF2ED925B40058163A /* Project object */;
+	rootObject = B580CB6F2EE25CE80031971A /* Project object */;
 }
